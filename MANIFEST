@@ -1,0 +1,25 @@
+Build.PL
+cgi-bin/templates/Crystal/tabwidget.html
+Changes
+examples/content.pl
+examples/tabwidget.pl
+htdocs/javascript/tabwidget.js
+htdocs/style/Crystal/buttons/link.png
+htdocs/style/Crystal/buttons/new.png
+htdocs/style/Crystal/tabwidget.css
+htdocs/style/Crystal/tabwidget/mlO.png
+htdocs/style/Crystal/tabwidget/mlU.png
+htdocs/style/Crystal/tabwidget/mmO.png
+htdocs/style/Crystal/tabwidget/mmU.png
+htdocs/style/Crystal/tabwidget/mrO.png
+htdocs/style/Crystal/tabwidget/mrU.png
+htdocs/style/Crystal/tabwidget/mul.png
+lib/HTML/Template/LZE/TabWidget.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/00-signature.t
+t/01-coverage.t
+t/02-pod.t
+t/03-tabwidget.t
