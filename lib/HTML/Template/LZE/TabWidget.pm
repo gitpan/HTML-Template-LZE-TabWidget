@@ -4,9 +4,9 @@ use warnings;
 require Exporter;
 use vars qw($DefaultClass @ISA  $mod_perl);
 our $style;
-use HTML::Template::LZE::Template;
-@HTML::Template::LZE::TabWidget::ISA         = qw( Exporter HTML::Template::LZE::Template);
-$HTML::Template::LZE::TabWidget::VERSION     = '0.24';
+use HTML::Template::LZE;
+@HTML::Template::LZE::TabWidget::ISA         = qw( Exporter HTML::Template::LZE);
+$HTML::Template::LZE::TabWidget::VERSION     = '0.25';
 $DefaultClass                                = 'HTML::Template::LZE::TabWidget' unless defined $HTML::Template::LZE::TabWidget::DefaultClass;
 @HTML::Template::LZE::TabWidget::EXPORT_OK   = qw(initTabWidget Menu tabwidgetHeader tabwidgetFooter);
 %HTML::Template::LZE::TabWidget::EXPORT_TAGS = ('all' => [qw(initTabWidget tabwidgetHeader Menu tabwidgetFooter)]);
@@ -250,7 +250,7 @@ sub getSelf {
 
 =head1 SEE ALSO
 
-L<CGI::LZE> L<HTML::Template::LZE::Template>
+L<CGI::LZE> L<HTML::Template::LZE>
 
 http://www.lindnerei.de,
 

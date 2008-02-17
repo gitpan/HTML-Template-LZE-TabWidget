@@ -1,4 +1,7 @@
-Revision history for Perl HTML::Template::LZE::TabWidget 0.24
+Revision history for Perl HTML::Template::LZE::TabWidget 0.25
+
+0.25
+        clean up Build system
 
 0.24
        refactoring.
