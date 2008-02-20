@@ -1,4 +1,7 @@
-Revision history for Perl HTML::Template::LZE::TabWidget 0.25
+Revision history for Perl HTML::Template::LZE::TabWidget 0.26
+
+0.26
+     - Overwrought Code.
 
 0.25
         clean up Build system

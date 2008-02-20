@@ -1,3 +1,2 @@
-
-print "body", br(), a({href => "$ENV{SCRIPT_NAME}"}, "Weiter"), br();
+print "body", br(), a({href => "$ENV{SCRIPT_NAME}"}, "Next"), br();
 1;

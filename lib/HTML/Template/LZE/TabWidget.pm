@@ -6,7 +6,7 @@ use vars qw($DefaultClass @ISA  $mod_perl);
 our $style;
 use HTML::Template::LZE;
 @HTML::Template::LZE::TabWidget::ISA         = qw( Exporter HTML::Template::LZE);
-$HTML::Template::LZE::TabWidget::VERSION     = '0.25';
+$HTML::Template::LZE::TabWidget::VERSION     = '0.26';
 $DefaultClass                                = 'HTML::Template::LZE::TabWidget' unless defined $HTML::Template::LZE::TabWidget::DefaultClass;
 @HTML::Template::LZE::TabWidget::EXPORT_OK   = qw(initTabWidget Menu tabwidgetHeader tabwidgetFooter);
 %HTML::Template::LZE::TabWidget::EXPORT_TAGS = ('all' => [qw(initTabWidget tabwidgetHeader Menu tabwidgetFooter)]);
@@ -26,45 +26,45 @@ HTML::Template::LZE::TabWidget.pm
 
       my %parameter = (
 
-      style => 'Crystal',
+                        style => 'Crystal',
 
-      path => "/srv/www/cgi-bin/templates",
+                        path => "/srv/www/cgi-bin/templates",
 
-      anchors => [
+                        anchors => [
 
-      {
+                                {
 
-      text  => 'HTML::Template::LZE::TabWidget ',
+                                text  => 'HTML::Template::LZE::TabWidget ',
 
-      href  => "$ENV{SCRIPT_NAME}",
+                                href  => "$ENV{SCRIPT_NAME}",
 
-      class => 'currentLink',
+                                class => 'currentLink',
 
-      src   => 'link.png'
+                                src   => 'link.png'
 
-      },
+                                },
 
-      {
+                                {
 
-      text => 'Next', 
+                                text => 'Next', 
 
-      class => 'links',
+                                class => 'links',
 
-      },
+                                },
 
-      {
+                                {
 
-      text => 'Dynamic Tab',
+                                text => 'Dynamic Tab',
 
-      title => 'per default it is the text'
+                                title => 'per default it is the text'
 
-      href  => 'javascript:displayhidden()',
+                                href  => 'javascript:displayhidden()',
 
-      class => 'javaScriptLink',
+                                class => 'javaScriptLink',
 
-      }
+                                }
 
-      ],
+                        ],
 
       );
 
@@ -76,19 +76,7 @@ HTML::Template::LZE::TabWidget.pm
 
       print $tabwidget->tabwidgetFooter();
 
-
-=head2 FO Syntax
-
-
-      =head3 function sets 
-
-      Here is a list of the function sets you can import:
-
-      :all
-
-=head1 DESCRIPTION
-
-You also need somejs and css file. 
+You also need some js and css file. 
 
 Example:
 
@@ -97,14 +85,6 @@ print start_html(
         -title => 'TabWidget',
 
         -script => [
-
-                {
-
-                -type  => 'text/javascript',
-
-                -src   => '/javascript/content.js'
-
-                },
 
                 {
 
@@ -120,7 +100,12 @@ print start_html(
 
         );
 
-=head1 Changes
+
+=head3 function sets 
+
+Here is a list of the function sets you can import:
+
+:all initTabWidget tabwidgetHeader Menu tabwidgetFooter
 
 
 =head2 new
@@ -231,16 +216,6 @@ sub action {
 
 =head2 getSelf
 
-HTML::Template::LZE::TabWidget Module use a Lincoln loader like class system.
-
-if the first parameter is a HTML::Template::LZE::TabWidget object (oo syntax ) this function returns the given parameters.
-
-or the first parameter it is not a object referenz (fo syntax) it create a new HTML::Template::LZE::TabWidget object,
-
-return it as first value  and  @_  as the second value .
-
-my ($self, @p) = getSelf(@_);
-
 =cut
 
 sub getSelf {
@@ -252,15 +227,19 @@ sub getSelf {
 
 L<CGI::LZE> L<HTML::Template::LZE>
 
-http://www.lindnerei.de,
+http://www.lindnerei.de, http://lindnerei.sourceforege.net,
+
+Example:
+
+http://lindnerei.sourceforge.net/cgi-bin/tabwidget.pl
 
 =head1 AUTHOR
 
-Dirk Lindner <lindnerei@o2online.de>
+Dirk Lindner <lze@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2008 by Hr. Dirk Lindner
+Copyright (C) 2006- 2008 by Hr. Dirk Lindner
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public License
